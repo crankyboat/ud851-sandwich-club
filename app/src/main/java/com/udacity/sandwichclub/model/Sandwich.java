@@ -1,8 +1,12 @@
 package com.udacity.sandwichclub.model;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Sandwich {
+
+    private static final List<String> NOT_AVAILABLE_LIST = Arrays.asList("N/A");
+    private static final String NOT_AVAILABLE_STRING = "N/A";
 
     private String mainName;
     private List<String> alsoKnownAs = null;
@@ -35,7 +39,7 @@ public class Sandwich {
     }
 
     public List<String> getAlsoKnownAs() {
-        return alsoKnownAs;
+        return alsoKnownAs.isEmpty() ? NOT_AVAILABLE_LIST : alsoKnownAs;
     }
 
     public void setAlsoKnownAs(List<String> alsoKnownAs) {
@@ -43,7 +47,7 @@ public class Sandwich {
     }
 
     public String getPlaceOfOrigin() {
-        return placeOfOrigin;
+        return placeOfOrigin.isEmpty() ? NOT_AVAILABLE_STRING : placeOfOrigin;
     }
 
     public void setPlaceOfOrigin(String placeOfOrigin) {
@@ -51,7 +55,7 @@ public class Sandwich {
     }
 
     public String getDescription() {
-        return description;
+        return description.isEmpty() ? NOT_AVAILABLE_STRING : description;
     }
 
     public void setDescription(String description) {
@@ -67,7 +71,7 @@ public class Sandwich {
     }
 
     public List<String> getIngredients() {
-        return ingredients;
+        return ingredients.isEmpty() ? NOT_AVAILABLE_LIST : ingredients;
     }
 
     public void setIngredients(List<String> ingredients) {
