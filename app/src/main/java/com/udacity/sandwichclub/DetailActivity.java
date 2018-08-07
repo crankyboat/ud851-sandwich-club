@@ -92,7 +92,6 @@ public class DetailActivity extends AppCompatActivity {
             } else {
                 alsoKnownAsTv.append(alsoKnownAsList.get(i));
             }
-
         }
 
     }
